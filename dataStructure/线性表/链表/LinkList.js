@@ -95,11 +95,6 @@ class LinkList {
     }
     currNode.next = currNode.next.next;
 
-    let currNode = this.getHeaderNode();
-    while (!currNode.next && currNode.next.val !== item) {
-      currNode = currNode.next;
-    }
-
     this._size--;
   }
 
