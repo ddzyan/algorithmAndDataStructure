@@ -8,12 +8,11 @@ const arr = [1, 3, 7, 2, 4, 6];
 function sort(arr) {
   const len = arr.length;
   let count = 0;
-  // 默认将数组的一个元素认定为有序区间，也表示有序区间个数
+  // 选择无序区域元素，插入到有序区域
   for (let i = 1; i < len; i++) {
-    count++;
     const value = arr[i];
     let j = i - 1;
-    // 在有序区间中腾出一个位置，存放元素
+    // 保证有序区域始终有序，并且腾出一个位置给无序区域元素
     for (; j >= 0; j--) {
       if (arr[j] > arr[j + 1]) {
         const tmp = arr[j];
@@ -23,6 +22,7 @@ function sort(arr) {
         break;
       }
     }
+
     arr[j + 1] = value;
   }
   console.log('count', count);

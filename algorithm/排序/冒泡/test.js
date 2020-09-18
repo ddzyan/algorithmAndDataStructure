@@ -12,12 +12,13 @@ function sort(arr) {
   // 有序区间的大小
   for (let i = 0; i < len; i++) {
     count++;
+    // 循环比较将最大值移动到有序区间
     for (let j = 0; j < len - i; j++) {
       count++;
       if (arr[j] > arr[j + 1]) {
-        const tmp = arr[j + 1];
-        arr[j + 1] = arr[j];
-        arr[j] = tmp;
+        const tmp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tmp;
         isSort = true;
       }
     }
@@ -25,6 +26,7 @@ function sort(arr) {
       break;
     }
   }
+
   console.log('count', count);
   return arr;
 }
