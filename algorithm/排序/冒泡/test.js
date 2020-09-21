@@ -9,17 +9,15 @@ function sort(arr) {
   const len = arr.length;
   let count = 0;
   let isSort = false;
-  // 有序区间的大小
+  // 有序区间大小
   for (let i = 0; i < len; i++) {
-    count++;
-    // 循环比较将最大值移动到有序区间
+    // 无序区间大小，选择最大数到有序区间
     for (let j = 0; j < len - i; j++) {
-      count++;
       if (arr[j] > arr[j + 1]) {
+        isSort = true;
         const tmp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = tmp;
-        isSort = true;
       }
     }
     if (!isSort) {
