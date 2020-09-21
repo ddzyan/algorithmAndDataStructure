@@ -11,8 +11,10 @@ function sort(arr) {
   let isSort = false;
   // 有序区间大小
   for (let i = 0; i < len; i++) {
+    count++;
     // 无序区间大小，选择最大数到有序区间
     for (let j = 0; j < len - i; j++) {
+      count++;
       if (arr[j] > arr[j + 1]) {
         isSort = true;
         const tmp = arr[j];
@@ -25,8 +27,7 @@ function sort(arr) {
     }
   }
 
-  console.log('count', count);
-  return arr;
+  return { arr, count };
 }
 
-console.log(sort(arr));
+module.exports = sort;

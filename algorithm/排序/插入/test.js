@@ -10,9 +10,11 @@ function sort(arr) {
   let count = 0;
   // 选择无序区域元素，插入到有序区域
   for (let i = 1; i < len; i++) {
+    count++;
     const value = arr[i];
     let j = i - 1;
     for (; j >= 0; j--) {
+      count++;
       if (arr[j] > arr[j + 1]) {
         const tmp = arr[j];
         arr[j] = arr[j + 1];
@@ -24,8 +26,8 @@ function sort(arr) {
 
     arr[j + 1] = value;
   }
-  console.log('count', count);
-  return arr;
+
+  return { arr, count };
 }
 
-console.log(sort(arr));
+module.exports = sort;

@@ -10,9 +10,11 @@ function sort(arr) {
   let count = 0;
   // 有序区域位置
   for (let i = 0; i < len; i++) {
+    count++;
     let index = i;
     // 找出最小元素下标
     for (let j = i + 1; j < len; j++) {
+      count++;
       if (arr[j] < arr[index]) {
         index = j;
       }
@@ -22,8 +24,8 @@ function sort(arr) {
     arr[i] = arr[index];
     arr[index] = tmp;
   }
-  console.log('count', count);
-  return arr;
+
+  return { arr, count };
 }
 
-console.log(sort(arr));
+module.exports = sort;
