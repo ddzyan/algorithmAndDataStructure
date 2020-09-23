@@ -3,8 +3,6 @@
  * 核心思想：采用分治思想，使用递归解决
  */
 
-let count = 0;
-
 /**
  *
  * @param {Array<number>} left
@@ -12,27 +10,26 @@ let count = 0;
  */
 function merge(left, right) {
   const result = [];
+  // 双指针遍历排序
   while (left.length > 0 && right.length > 0) {
     if (left[0] <= right[0]) {
+      // 移除数组第一个元素，并且返回
       result.push(left.shift());
     } else {
       result.push(right.shift());
     }
-  }
 
-  while (left.length) {
-    result.push(left.shift());
-  }
+    // 将多余的项目直接插入到数组末尾,下面2个合并代码，只有一个会运行
+    result.concat(left);
 
-  while (right.length) {
-    result.push(right.shift());
+    result.concat(right);
   }
 
   return result;
 }
 
 /**
- *
+ * @description 将数组一直切分成对等的2份，直到长度小于等于2
  * @param {Array<number>} arr 数组
  */
 function mergeSort(arr) {
@@ -40,9 +37,14 @@ function mergeSort(arr) {
   if (len < 2) {
     return arr;
   }
+
+  // 计算中间点
   const mind = Math.floor(len / 2);
+  // 切割数组,左开右闭合
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
+
+  // 采用递归继续拆解，直到无法拆解后排序合并
   return merge(mergeSort(left), mergeSort(right));
 }
 

@@ -18,13 +18,10 @@ function merge(left, right) {
     }
   }
 
-  while (left.length) {
-    result.push(left.shift());
-  }
+  // 将多余的项目直接插入到数组末尾,下面2个合并代码，只有一个会运行
+  result.concat(left);
 
-  while (right.length) {
-    result.push(right.shift());
-  }
+  result.concat(right);
 
   return result;
 }

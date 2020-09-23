@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 describe('排序测试', function () {
-  const arr = require('./data')(10, 100);
+  const arr = require('./data')(10000, 100);
   this.slow(1);
   it('冒泡测试', () => {
     const sort = require('../../../algorithm/排序/冒泡/test');
