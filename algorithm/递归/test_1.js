@@ -19,8 +19,6 @@ function f(n) {
   if (n === 2) return 2;
   return f(n - 1) + f(n - 2);
 }
-console.log(f(10));
-console.timeEnd('fn');
 
 // 因为f()的算法存在重复计算计算，导致的空间和时间复杂度的提升，所以需要使用hashMap保存结果来避免
 console.time('fn1');
@@ -37,8 +35,5 @@ function f1(n) {
   hashMap.set(n, res);
   return res;
 }
-
-console.log(f1(10));
-console.timeEnd('fn1');
 
 // 根据打印输出的时间发现f1<f

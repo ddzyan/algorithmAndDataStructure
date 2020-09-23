@@ -26,8 +26,5 @@ function sort(arr) {
     }
     arr[j + 1] = value;
   }
-  console.log('count', count);
   return arr;
 }
-
-console.log(sort(arr));

@@ -24,8 +24,5 @@ function sort(arr) {
     arr[i] = arr[index];
     arr[index] = tmp;
   }
-  console.log('count', count);
   return arr;
 }
-
-console.log(sort(arr));

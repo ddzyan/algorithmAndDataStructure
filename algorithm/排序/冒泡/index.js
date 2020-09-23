@@ -24,8 +24,5 @@ function sort(arr) {
       break;
     }
   }
-  console.log(count);
   return arr;
 }
-
-console.log(sort(arr));

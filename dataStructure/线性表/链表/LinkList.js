@@ -72,7 +72,6 @@ class LinkList {
   display() {
     let currNode = this.getHeaderNode().next;
     while (currNode) {
-      console.log(currNode.val);
       currNode = currNode.next;
     }
   }
