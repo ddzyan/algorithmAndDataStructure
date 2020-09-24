@@ -10,20 +10,17 @@
  */
 function merge(left, right) {
   const result = [];
-  // 双指针遍历排序
+
   while (left.length > 0 && right.length > 0) {
     if (left[0] <= right[0]) {
-      // 移除数组第一个元素，并且返回
       result.push(left.shift());
     } else {
       result.push(right.shift());
     }
-
-    // 将多余的项目直接插入到数组末尾,下面2个合并代码，只有一个会运行
-    result.concat(left);
-
-    result.concat(right);
   }
+
+  result.concat(left);
+  result.concat(right);
 
   return result;
 }
@@ -34,17 +31,17 @@ function merge(left, right) {
  */
 function mergeSort(arr) {
   const len = arr.length;
+  // 递归终止条件
   if (len < 2) {
     return arr;
   }
 
-  // 计算中间点
+  // 寻找中间点
   const mind = Math.floor(len / 2);
-  // 切割数组,左开右闭合
+  // 切分数组
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
 
-  // 采用递归继续拆解，直到无法拆解后排序合并
   return merge(mergeSort(left), mergeSort(right));
 }
 

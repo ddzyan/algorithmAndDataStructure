@@ -10,8 +10,10 @@
  * @param {number} end
  */
 function sort(arr, start, end) {
+  // 递归停止条件
   if (start >= end) return;
 
+  // 按照切割点进行大小分类，并且返回切割点坐标分类后的坐标
   const pivotPoint = partition(a, start, end);
   sort(arr, start, pivotPoint - 1);
   sort(arr, pivotPoint, end);

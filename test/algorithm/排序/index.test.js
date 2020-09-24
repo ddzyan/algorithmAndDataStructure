@@ -35,7 +35,7 @@ describe('排序测试', function () {
     assert.strictEqual(newArr.toString(), arr.toString(), '排序结果错误');
   });
 
-  it('快速', () => {
+  it.skip('快速', () => {
     const mergeSort = require('../../../algorithm/排序/快速/test');
     const { arr: newArr } = mergeSort(arr);
 
