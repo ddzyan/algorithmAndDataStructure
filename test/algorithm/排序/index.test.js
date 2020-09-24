@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 describe('排序测试', function () {
-  const arr = require('./data')(100, 100);
+  const arr = require('./data')(2, 100);
   this.slow(1);
   it('冒泡', () => {
     const sort = require('../../../algorithm/排序/冒泡/test');
@@ -35,8 +35,8 @@ describe('排序测试', function () {
     assert.strictEqual(newArr.toString(), arr.toString(), '排序结果错误');
   });
 
-  it.skip('快速', () => {
-    const mergeSort = require('../../../algorithm/排序/快速/test');
+  it('快速', () => {
+    const mergeSort = require('../../../algorithm/排序/快速');
     const { arr: newArr } = mergeSort(arr);
 
     //assert.ok(count > 0, '运算次数错误');

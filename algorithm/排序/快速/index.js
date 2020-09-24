@@ -4,32 +4,16 @@
  */
 
 /**
- *
- * @param {Array<number>} arr
- * @param {number} start
- * @param {number} end
- */
-function sort(arr, start, end) {
-  // 递归停止条件
-  if (start >= end) return;
-
-  // 按照切割点进行大小分类，并且返回切割点坐标分类后的坐标
-  const pivotPoint = partition(a, start, end);
-  sort(arr, start, pivotPoint - 1);
-  sort(arr, pivotPoint, end);
-}
-
-/**
  * @description 将数组按照分割点进行站位，并且返回分割点
  * @returns {Array<number>} arr
  * @returns {number} start
  * @returns {number} end
  */
 function partition(arr, start, end) {
-  const pivotValue = arr[end - 1];
+  const pivotValue = arr[end];
   let i = start;
 
-  for (let j = start; j < end - 1; j++) {
+  for (let j = start; j < end; j++) {
     if (arr[j] < pivotValue) {
       const temp = arr[i];
       arr[i] = arr[j];
@@ -44,7 +28,22 @@ function partition(arr, start, end) {
   return i;
 }
 
-module.exports = function (arr) {
-  sort(arr, 0, arr.length - 1);
-  return arr;
-};
+/**
+ *
+ * @param {Array<number>} arr
+ * @param {number} start
+ * @param {number} end
+ */
+function sort(arr, start, end) {
+  if (start >= end) return arr;
+
+  const pivotPoint = partition(arr, start, end);
+  sort(arr, start, pivotPoint - 1);
+  sort(arr, pivotPoint, end);
+}
+
+const arr = [4, 5, 3, 6, 9, 2];
+
+sort(arr, 0, 5);
+
+console.log(arr);
