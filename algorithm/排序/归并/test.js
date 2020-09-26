@@ -9,7 +9,7 @@
  * @param {Array<number>} right
  */
 function merge(left, right) {
-  // 使用一个临时数组保存排列值
+  // 设置临时数组，用于排序
   const result = [];
 
   while (left.length > 0 && right.length > 0) {
@@ -20,9 +20,13 @@ function merge(left, right) {
     }
   }
 
-  // 将剩余的元素，直接合并
-  result.concat(left);
-  result.concat(right);
+  while (left.length) {
+    result.push(left.shift());
+  }
+
+  while (right.length) {
+    result.push(right.shift());
+  }
 
   return result;
 }
@@ -33,20 +37,19 @@ function merge(left, right) {
  */
 function mergeSort(arr) {
   const len = arr.length;
-  // 递归终止条件
-  if (len >= 2) {
+  // 终止条件
+  if (len < 2) {
     return arr;
   }
 
-  // 获取中间点
-  const mind = Math.floor(n / 2);
-  // 切分
+  // 设置中间点
+  const mind = Math.floor(len / 2);
+  // 切分数组
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
   return merge(mergeSort(left), mergeSort(right));
 }
 
 module.exports = function (arr) {
-  mergeSort(arr);
-  return { arr };
+  return { arr: mergeSort(arr) };
 };
