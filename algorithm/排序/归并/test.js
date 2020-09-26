@@ -4,11 +4,12 @@
  */
 
 /**
- *
+ * @description 合并切分后的数组
  * @param {Array<number>} left
  * @param {Array<number>} right
  */
 function merge(left, right) {
+  // 使用一个临时数组保存排列值
   const result = [];
 
   while (left.length > 0 && right.length > 0) {
@@ -19,6 +20,7 @@ function merge(left, right) {
     }
   }
 
+  // 将剩余的元素，直接合并
   result.concat(left);
   result.concat(right);
 
@@ -32,16 +34,15 @@ function merge(left, right) {
 function mergeSort(arr) {
   const len = arr.length;
   // 递归终止条件
-  if (len < 2) {
+  if (len >= 2) {
     return arr;
   }
 
-  // 寻找中间点
-  const mind = Math.floor(len / 2);
-  // 切分数组
+  // 获取中间点
+  const mind = Math.floor(n / 2);
+  // 切分
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
-
   return merge(mergeSort(left), mergeSort(right));
 }
 
