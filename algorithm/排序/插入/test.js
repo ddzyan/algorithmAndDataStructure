@@ -1,14 +1,13 @@
 /**
  * 选择排序 --- 位置调换
- * 核心思想：将区间分为未排序区域和已排序区域，然后将未排序区域的数字插入到已排序区域，并且还需要保证已排序区域始终有序，默认第一个元素为已排序区间。
+ * 核心思想：将未排序的元素依次插入到已排序空间中，默认第一个元素为已排序空间。
+ * @param {Array} arr
  */
-
-const arr = [1, 3, 7, 2, 4, 6];
-
 function sort(arr) {
   const len = arr.length;
   let count = 0;
-  // 选择无序区域元素，插入到有序区域
+
+  // 将未排序的元素依次插入到已排序空间中，默认第一个元素为已排序空间。
   for (let i = 1; i < len; i++) {
     count++;
     const value = arr[i];
@@ -16,9 +15,9 @@ function sort(arr) {
     for (; j >= 0; j--) {
       count++;
       if (arr[j] > arr[j + 1]) {
-        const tmp = arr[j];
+        const temp = arr[j];
         arr[j] = arr[j + 1];
-        arr[j + 1] = tmp;
+        arr[j + 1] = temp;
       } else {
         break;
       }
@@ -26,7 +25,6 @@ function sort(arr) {
 
     arr[j + 1] = value;
   }
-
   return { arr, count };
 }
 
