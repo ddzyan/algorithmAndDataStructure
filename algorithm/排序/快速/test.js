@@ -10,21 +10,19 @@
  * @returns {number} end
  */
 function partition(arr, start, end) {
-  const value = arr[end];
+  const pointValue = arr[end];
   let i = start;
-
   for (let j = start; j < end; j++) {
-    if (arr[j] < value) {
+    if (arr[j] < pointValue) {
       const temp = arr[j];
       arr[j] = arr[i];
       arr[i] = temp;
       i++;
     }
   }
-
-  const temp = arr[end];
-  arr[end] = arr[i];
-  arr[i] = temp;
+  const temp = arr[i];
+  arr[i] = arr[end];
+  arr[end] = temp;
 
   return i;
 }
@@ -36,11 +34,6 @@ function partition(arr, start, end) {
  * @param {number} end
  */
 function sort(arr, start, end) {
-  /**
-   * 1. 递归终止条件
-   * 2. 按照切分点进行切分，在进行递归
-   */
-
   if (start >= end) return arr;
 
   const point = partition(arr, start, end);
