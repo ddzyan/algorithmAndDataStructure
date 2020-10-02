@@ -10,20 +10,22 @@
  * @returns {number} end
  */
 function partition(arr, start, end) {
+  // 默认分区点
   const pointValue = arr[end];
   let i = start;
+
   for (let j = start; j < end; j++) {
     if (arr[j] < pointValue) {
-      const temp = arr[j];
-      arr[j] = arr[i];
-      arr[i] = temp;
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
       i++;
     }
   }
+
   const temp = arr[i];
   arr[i] = arr[end];
   arr[end] = temp;
-
   return i;
 }
 
@@ -34,10 +36,12 @@ function partition(arr, start, end) {
  * @param {number} end
  */
 function sort(arr, start, end) {
+  // 递归停止条件，原地排序
   if (start >= end) return arr;
 
+  // 分区，递归
   const point = partition(arr, start, end);
-  sort(arr, start, point - 1);
+  sort(arr, 0, point - 1);
   sort(arr, point, end);
 }
 
