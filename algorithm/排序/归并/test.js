@@ -9,24 +9,24 @@
  * @param {Array<number>} right
  */
 function merge(left, right) {
-  const tempArr = [];
-  while (left.length > 0 && right.length > 0) {
+  const temp = [];
+  while (left.length > 0 && right.length) {
     if (left[0] <= right[0]) {
-      tempArr.push(left.shift());
+      temp.push(left.shift());
     } else {
-      tempArr.push(right.shift());
+      temp.push(right.shift());
     }
   }
 
   while (left.length) {
-    tempArr.push(left.shift());
+    temp.push(left.shift());
   }
 
   while (right.length) {
-    tempArr.push(right.shift());
+    temp.push(right.shift());
   }
 
-  return tempArr;
+  return temp;
 }
 
 /**
@@ -35,15 +35,12 @@ function merge(left, right) {
  */
 function mergeSort(arr) {
   const len = arr.length;
-  // 递归终止条件,非原地排序
-  if (len < 2) {
-    return arr;
-  }
+  if (len < 2) return arr;
 
   const mind = Math.floor(len / 2);
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
-  // 非原地排序需要返回结果
+
   return merge(mergeSort(left), mergeSort(right));
 }
 

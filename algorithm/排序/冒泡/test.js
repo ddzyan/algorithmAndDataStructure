@@ -7,11 +7,12 @@
 function sort(arr) {
   const len = arr.length;
   let count = 0;
+
   let sort = false;
-  // 循环比较，将最大的元素放到末尾
+  // 末尾有序空间大小
   for (let i = 0; i < len; i++) {
-    count++;
-    for (let j = 0; j < len - i; j++) {
+    sort = false;
+    for (let j = 0; j < len - i - 1; j++) {
       count++;
       if (arr[j] > arr[j + 1]) {
         const temp = arr[j];

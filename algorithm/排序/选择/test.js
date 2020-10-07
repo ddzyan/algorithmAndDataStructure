@@ -7,11 +7,9 @@ function sort(arr) {
   const len = arr.length;
   let count = 0;
 
-  // 依次在未排序空间中找到最小值，插入到已排序区间
   for (let i = 0; i < len; i++) {
-    count++;
     let index = i;
-    for (let j = i; j < len; j++) {
+    for (let j = i + 1; j < len; j++) {
       count++;
       if (arr[j] < arr[index]) {
         index = j;

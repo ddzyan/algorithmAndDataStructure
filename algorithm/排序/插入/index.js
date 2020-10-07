@@ -10,7 +10,6 @@ function sort(arr) {
   let count = 0;
   // 默认将数组的一个元素认定为有序区间，也表示有序区间个数
   for (let i = 1; i < len; i++) {
-    count++;
     const value = arr[i];
     let j = i - 1;
     // 在有序区间中腾出一个位置，存放元素

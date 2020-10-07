@@ -9,7 +9,6 @@ function sort(arr) {
   const len = arr.length;
   let count = 0;
   for (let i = 0; i < len; i++) {
-    count++;
     let isSort = false;
     for (let j = 0; j < len - i - 1; j++) {
       count++;
