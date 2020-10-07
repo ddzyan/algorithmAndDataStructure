@@ -1,8 +1,8 @@
 const assert = require('assert');
-const search = require('../../../algorithm/递归/binarySearch');
+const search = require('../../../algorithm/二分查找/binarySearch_01');
 
 describe('递归测试', () => {
-  it('在有序不重复的数组中，查找指定的元素 test', () => {
+  it('在有序不重复的数组中，查找指定的元素', () => {
     const arr = [1, 2, 3, 4, 5, 6, 10, 12, 13, 18, 20];
     const res = search(arr, 10);
     assert(res.count > 0, 'count 错误');
