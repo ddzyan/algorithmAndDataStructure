@@ -1,5 +1,5 @@
 const assert = require('assert');
-const search = require('../../../algorithm/二分查找/binarySearch_01');
+const search = require('../../../algorithm/二分查找/binarySearch_01_test');
 
 describe('二分查找', () => {
   describe('在有序不重复的数组中，查找指定的元素', () => {
