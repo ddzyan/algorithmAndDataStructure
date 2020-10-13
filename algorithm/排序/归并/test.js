@@ -10,7 +10,8 @@
  */
 function merge(left, right) {
   const temp = [];
-  while (left.length > 0 && right.length) {
+
+  while (left.length > 0 && right.length > 0) {
     if (left[0] <= right[0]) {
       temp.push(left.shift());
     } else {
@@ -37,7 +38,7 @@ function mergeSort(arr) {
   const len = arr.length;
   if (len < 2) return arr;
 
-  const mind = Math.floor(len / 2);
+  const mind = len >> 1;
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
 

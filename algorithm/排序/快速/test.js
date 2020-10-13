@@ -10,14 +10,13 @@
  * @returns {number} end
  */
 function partition(arr, start, end) {
-  const pointValue = arr[end];
+  const point = arr[end];
   let i = start;
-
   for (let j = start; j < end; j++) {
-    if (arr[j] < pointValue) {
-      const temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
+    if (arr[j] < point) {
+      const temp = arr[j];
+      arr[j] = arr[i];
+      arr[i] = temp;
       i++;
     }
   }
@@ -25,6 +24,7 @@ function partition(arr, start, end) {
   const temp = arr[i];
   arr[i] = arr[end];
   arr[end] = temp;
+
   return i;
 }
 
@@ -37,8 +37,10 @@ function partition(arr, start, end) {
 function sort(arr, start, end) {
   if (start >= end) return arr;
 
+  // 寻找分割点
   const point = partition(arr, start, end);
-  sort(arr, 0, point - 1);
+
+  sort(arr, start, point - 1);
   sort(arr, point, end);
 }
 

@@ -12,7 +12,7 @@ $ npm  test
 
 ## [算法](./algorithm)
 
-- [排序](./algorithm/排序) (复习) 15)
+- [排序](./algorithm/排序) (复习) 16)
   - [x] 插入
   - [x] 冒泡
   - [x] 选择

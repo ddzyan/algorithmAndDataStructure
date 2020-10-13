@@ -19,8 +19,13 @@ function merge(left, right) {
     }
   }
 
-  result.concat(left);
-  result.concat(right);
+  while (left.length) {
+    result.push(left.shift());
+  }
+
+  while (right.length) {
+    result.push(right.shift());
+  }
 
   return result;
 }
@@ -37,7 +42,7 @@ function mergeSort(arr) {
   }
 
   // 寻找中间点
-  const mind = Math.floor(len / 2);
+  const mind = len >> 1;
   // 切分数组
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
