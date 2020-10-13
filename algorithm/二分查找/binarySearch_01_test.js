@@ -17,7 +17,7 @@ const binarySearch = function (arr, low, hight, targetValue) {
   const mind = Math.floor((low + hight) / 2);
   if (arr[mind] === targetValue) {
     return mind;
-  } else if (arr[mind < targetValue]) {
+  } else if (arr[mind] < targetValue) {
     return binarySearch(arr, mind + 1, hight, targetValue);
   } else {
     return binarySearch(arr, low, mind - 1, targetValue);
@@ -33,7 +33,6 @@ const search = function (arr, targetValue) {
   const len = arr.length;
 
   const index = binarySearch(arr, 0, len - 1, targetValue);
-  console.log(index);
   return { index, count };
 };
 
