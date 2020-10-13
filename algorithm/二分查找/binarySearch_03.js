@@ -1,4 +1,4 @@
-// 在有序数组中查找第一个等于指定值的数值下标
+// 在有序数组中查找最后一个等于指定值的数值下标
 
 let count = 0;
 
@@ -6,19 +6,18 @@ let count = 0;
  *
  * @param {Array} arr
  * @param {number} low
- * @param {number} hight
+ * @param {number} height
  * @param {number} value
  */
-const binarySearch = function (arr, low, hight, value) {
+const binarySearch = function (arr, low, height, value) {
   count++;
-  if (low > hight) return -1;
+  if (low > height) return -1;
 
-  const mind = (low + hight) >> 1;
-  console.log('mind', mind);
-  if (arr[mind] === value) {
-    return arr[mind - 1] === value ? binarySearch(arr, low, mind - 1, value) : mind;
+  const mind = (low + height) >> 1;
+  if (arr[mind] == value) {
+    return arr[mind + 1] === value ? binarySearch(arr, mind + 1, height, value) : mind;
   } else if (arr[mind] < value) {
-    return binarySearch(arr, mind + 1, hight, value);
+    return binarySearch(arr, mind + 1, height, value);
   } else {
     return binarySearch(arr, low, mind - 1, value);
   }
