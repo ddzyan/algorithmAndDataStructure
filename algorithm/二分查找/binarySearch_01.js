@@ -17,7 +17,8 @@ const binarySearch = function (arr, low, hight, value) {
   count++;
   if (low > hight) return -1;
 
-  const mind = (low + hight) >> 2;
+  // 相加可能超出数组上限
+  const mind = (low + hight) >> 1;
   if (arr[mind] === value) {
     return mind;
   } else if (arr[mind] < value) {
