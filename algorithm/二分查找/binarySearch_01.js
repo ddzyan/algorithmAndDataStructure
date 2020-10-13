@@ -36,7 +36,8 @@ const binarySearch = function (arr, low, hight, value) {
 const search = function (arr, value) {
   const len = arr.length;
 
-  binarySearch(arr, 0, len - 1, value);
+  const index = binarySearch(arr, 0, len - 1, value);
+  return { index, count };
 };
 
 module.exports = search;
