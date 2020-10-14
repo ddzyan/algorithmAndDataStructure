@@ -3,6 +3,7 @@ const search1 = require('../../../algorithm/二分查找/binarySearch_01_test');
 const search2 = require('../../../algorithm/二分查找/binarySearch_02_test');
 const search3 = require('../../../algorithm/二分查找/binarySearch_03');
 const search4 = require('../../../algorithm/二分查找/binarySearch_04');
+const search5 = require('../../../algorithm/二分查找/q33-搜索旋转排序数组');
 
 describe('二分查找', () => {
   it('在有序不重复的数组中,查找指定值的元素', () => {
@@ -39,5 +40,13 @@ describe('二分查找', () => {
     assert(res.count > 0, 'count 错误');
     assert.strictEqual(res.index, 1, 'index 错误');
     console.timeEnd('查找第一个大于等于给定值的元素');
+  });
+
+  it('搜索旋转排序数组', () => {
+    console.time('搜索旋转排序数组');
+    const arr = [4, 5, 6, 7, 0, 1, 2];
+    const index = search5(arr, 0);
+    assert.strictEqual(index, 4, 'index 错误');
+    console.timeEnd('搜索旋转排序数组');
   });
 });

@@ -45,5 +45,3 @@ function sort(arr, start, end) {
 const arr = [4, 5, 3, 6, 9, 2];
 
 sort(arr, 0, 5);
-
-console.log(arr);

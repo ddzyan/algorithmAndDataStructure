@@ -14,7 +14,6 @@ const binarySearch = function (arr, low, hight, value) {
   if (low > hight) return -1;
 
   const mind = (low + hight) >> 1;
-  console.log('mind', mind);
   if (arr[mind] === value) {
     return arr[mind - 1] === value ? binarySearch(arr, low, mind - 1, value) : mind;
   } else if (arr[mind] < value) {
