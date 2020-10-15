@@ -34,5 +34,10 @@ $ npm  test
 
 ## [数据结构](./dataStructure)
 
-- [ ] 线性表
-  - [x] [链表](./dataStructure/线性表/链表)
+- 线性表
+  - 顺序表
+    - hash 表
+      - [ ] [抽象数据结构](./dataStructure/线性表/顺序表/hash表/hashTable)
+      - [ ] hash 冲突
+  - 链表
+    - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
