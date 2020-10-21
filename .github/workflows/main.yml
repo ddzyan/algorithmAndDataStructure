@@ -1,0 +1,21 @@
+name: Nodejs
+on:
+  push:
+    branches:
+      - master
+      - main
+
+env:
+  NODE_VERSION: '12.x' # nodejs 版本
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npm.taobao.org
+      - run: npm ci
+      - run: npm test
