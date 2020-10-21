@@ -39,7 +39,6 @@ $ npm  test
 - 线性表
   - 顺序表
     - hash 表
-      - [ ] [抽象数据结构](./dataStructure/线性表/顺序表/hash表/hashTable)
-      - [ ] hash 冲突
+      - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap)
   - 链表
     - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
