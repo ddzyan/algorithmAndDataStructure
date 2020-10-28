@@ -42,3 +42,7 @@ $ npm  test
       - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap)
   - 链表
     - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
+- 非线性表
+  - 树
+    - 二叉树
+      - [x] [源码实现二叉查找树](./dataStructure/线性表/非线性表/树/二叉树/BinarySearchTree)
