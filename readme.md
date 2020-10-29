@@ -45,4 +45,4 @@ $ npm  test
 - 非线性表
   - 树
     - 二叉树
-      - [x] [源码实现二叉查找树](./dataStructure/线性表/非线性表/树/二叉树/BinarySearchTree)
+      - [x] [源码实现二叉查找树](./dataStructure/线性表/非线性表/树/二叉树/BinarySearchTree.js)
