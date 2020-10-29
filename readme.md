@@ -39,7 +39,7 @@ $ npm  test
 - 线性表
   - 顺序表
     - hash 表
-      - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap)
+      - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap.js)
   - 链表
     - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
 - 非线性表
