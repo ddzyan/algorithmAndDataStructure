@@ -70,6 +70,24 @@ const _postOrderTraverse = (node, cb) => {
   }
 };
 
+const _insertNode = (node, newNode) => {
+  if (node.data > newNode.data) {
+    if (!node.left) {
+      node.left = newNode;
+    } else {
+      _insertNode(node.left, newNode);
+    }
+    // 左边
+  } else {
+    // 右边
+    if (!node.right) {
+      node.right = newNode;
+    } else {
+      _insertNode(node.right, newNode);
+    }
+  }
+};
+
 class Node {
   constructor(data) {
     this.data = data;
@@ -89,7 +107,7 @@ class BinarySearchTree {
     if (!this.root) {
       this.root = newNode;
     } else {
-      this._insertNode(this.root, newNode);
+      _insertNode(this.root, newNode);
     }
   }
 
@@ -131,23 +149,11 @@ class BinarySearchTree {
     this.root = _remove(this.root, key);
   }
 
-  _insertNode(node, newNode) {
-    if (node.data > newNode.data) {
-      if (!node.left) {
-        node.left = newNode;
-      } else {
-        this._insertNode(node.left, newNode);
-      }
-      // 左边
-    } else {
-      // 右边
-      if (!node.right) {
-        node.right = newNode;
-      } else {
-        this._insertNode(node.right, newNode);
-      }
-    }
-  }
+  // 获取最大节点
+  getMax() {}
+
+  // 获取最小节点
+  getMin() {}
 }
 
 const binarySearchTree = new BinarySearchTree();
