@@ -12,7 +12,6 @@ const hashCode = function (str) {
     hash = (hash << 5) - hash + char;
     hash = hash & hash; // 转换为32为整数
   }
-  console.log(hash);
   return hash;
 };
 

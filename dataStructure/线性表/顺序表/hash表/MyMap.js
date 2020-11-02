@@ -8,19 +8,18 @@
  *   console.log(key);
  * }
  * 输出未 1,2,3
- * 
+ *
  * 我们直到 Map 底层采用的是 hash表 结构来实现，其中 hashKey 是由 key ---> hashCode(key) ---> hashKey 转换而来
  * 所以如果按照 hash 表位置遍历输出的话，输出的结果将不会是向上面这要按照输入顺序，有序输出才对，这里我们可以得出结论：
  * Map 底层还维护了一种结构来记录用户的输入顺序
- * 
- * 
+ *
+ *
  * map.set({name:'james'},{age:35,child:3});
- * 
+ *
  * map 的 key 可以传入一个对象，我们了解 对象 并不属于一个基础的数据类型，无法直接进行转换获得 hashKey，Map 底层的 hashCode 函数采用的是 c++ 实现
  * 传入的 key 为变量的内存地址指针，我们了解过指针也是整型二进制的数据，所以可以通过 hashCode 转换均匀的分布在 hash 表的 key 中
- * 
+ *
  */
-
 
 // js 底层 Map 源码实现
 
@@ -166,24 +165,3 @@ class MyMap {
 }
 
 module.exports = MyMap;
-
-const map = new MyMap();
-
-map.set('apple', { name: 'james1' });
-map.set('apple', { name: 'james2' }); // 由于 key 一致，所以 value 会被覆盖
-map.set('banana', { name: 'james' });
-map.forEach((key, value) => {
-  console.log('key', key);
-  console.log('value', value);
-});
-
-map.get('apple');
-
-/* const map = new Map();
-map.set('a', 'ab');
-map.set('b', 'bc');
-
-map.forEach(([key, value]) => {
-  console.log('key', key);
-  console.log('value', value);
-}); */
