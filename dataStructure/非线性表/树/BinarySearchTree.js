@@ -150,13 +150,41 @@ class BinarySearchTree {
   }
 
   // 获取最大节点
-  getMax() {}
+  getMax() {
+    // 只遍历右节点
+    if (!this.root) {
+      return null;
+    }
+
+    let node = this.root;
+
+    while (node.right) {
+      node = node.right;
+    }
+
+    return node;
+  }
 
   // 获取最小节点
-  getMin() {}
+  getMin() {
+    // 只遍历左节点
+    if (!this.root) {
+      return null;
+    }
+
+    let node = this.root;
+
+    while (node.left) {
+      node = node.left;
+    }
+
+    return node;
+  }
 }
 
-const binarySearchTree = new BinarySearchTree();
+module.exports = BinarySearchTree;
+
+/* const binarySearchTree = new BinarySearchTree();
 
 binarySearchTree.inset(18);
 binarySearchTree.inset(10);
@@ -182,3 +210,6 @@ console.log('前序遍历');
 binarySearchTree.preOrderTraverse(data => {
   console.log(data);
 });
+
+console.log(binarySearchTree.getMax());
+console.log(binarySearchTree.getMin()); */
