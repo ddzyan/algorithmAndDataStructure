@@ -9,7 +9,7 @@ env:
   NODE_VERSION: '12.x' # nodejs 版本
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
