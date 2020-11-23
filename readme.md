@@ -42,13 +42,13 @@ $ npm  test
       - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap.js)
   - 链表
     - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
-  - 图
-    - [x] [无向图源码四线](./dataStructure/线性表/图/graph.js)
 - 非线性表
   - 树
     - 二叉树
       - [x] [源码实现二叉查找树](./dataStructure/非线性表/树/二叉树/BinarySearchTree.js)
       - [x] [q104-二叉树的最大深度](./dataStructure/非线性表/树/二叉树/q104-二叉树的最大深度.js)
+  - 图
+    - [x] [无向图源码四线](./dataStructure/非线性表/图/graph.js)
 
 ## 笔记
 
