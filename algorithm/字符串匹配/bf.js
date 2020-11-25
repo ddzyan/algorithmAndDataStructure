@@ -9,12 +9,16 @@ const indexOfA = function (str) {
 
   const count = n - m + 1;
   for (let i = 0; i <= count; i++) {
-    let strA = '';
-    for (let j = i; j < i + m; j++) {
-      strA += this[j];
+    let startIndex = i;
+    let match = true;
+    for (let j = 0; j < m; j++) {
+      if (this[startIndex + j] !== str[j]) {
+        match = false;
+        break;
+      }
     }
-    if (str === strA) {
-      return i;
+    if (match) {
+      return startIndex;
     }
   }
 
@@ -22,6 +26,3 @@ const indexOfA = function (str) {
 };
 
 String.prototype.indexOfA = indexOfA;
-
-const a = 'hello word';
-console.log(a.indexOfA('aa'));
