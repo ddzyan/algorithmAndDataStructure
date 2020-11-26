@@ -50,6 +50,8 @@ $ npm  test
     - 二叉树
       - [x] [源码实现二叉查找树](./dataStructure/非线性表/树/二叉树/BinarySearchTree.js)
       - [x] [q104-二叉树的最大深度](./dataStructure/非线性表/树/二叉树/q104-二叉树的最大深度.js)
+    - Trie 树
+      - [x] [源码实现 Trie 树]()
   - 图
     - [x] [无向图源码实现](./dataStructure/非线性表/图/graph.js)
 

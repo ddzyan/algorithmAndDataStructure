@@ -1,5 +1,5 @@
 ﻿/**
- * @description 使用 BF 算法实现字符串匹配
+ * @description 使用 BF 算法实现字符串匹配，时间复杂度为O(m*n)
  * @param {string} string
  */
 const indexOfA = function (str) {
@@ -12,6 +12,7 @@ const indexOfA = function (str) {
     let startIndex = i;
     let match = true;
     for (let j = 0; j < m; j++) {
+      // 逐个比较子串的每个字符和模式串中的每个字符是否相等
       if (this[startIndex + j] !== str[j]) {
         match = false;
         break;
