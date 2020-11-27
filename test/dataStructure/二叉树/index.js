@@ -1,6 +1,6 @@
 const assert = require('assert');
-const maxDepth = require('../../../dataStructure/非线性表/树/q104-二叉树的最大深度');
-const BinarySearchTree = require('../../../dataStructure/非线性表/树/BinarySearchTree');
+const maxDepth = require('../../../dataStructure/非线性表/树/二叉树/q104-二叉树的最大深度');
+const BinarySearchTree = require('../../../dataStructure/非线性表/树/二叉树/BinarySearchTree');
 
 describe('二叉树', () => {
   describe('平衡二叉树 test', () => {

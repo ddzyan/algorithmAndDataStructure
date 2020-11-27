@@ -19,4 +19,9 @@ describe('Trie 树', function () {
     assert(trie.find('how'), '未查找到指定字符串');
     assert(!trie.find('good'), '查找到不存在的字符串');
   });
+
+  it('startsWith test', function () {
+    assert(trie.find('he'), '未查找到指定字符串');
+    assert(!trie.find('good'), '查找到不存在的字符串');
+  });
 });

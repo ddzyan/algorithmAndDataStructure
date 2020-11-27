@@ -54,6 +54,24 @@ class Trie {
 
     return p.isEndingChar;
   }
+
+  /**
+   * @description 前缀匹配
+   * @param {string} str
+   * @returns {boolean} true 匹配 false 不匹配
+   */
+  startsWith(str) {
+    let p = this.root;
+    for (let i = 0; i < str.length; i++) {
+      const index = str.charCodeAt(i) - 'a'.charCodeAt(0);
+      if (!p.children[index]) {
+        return false;
+      }
+      p = p.children[index];
+    }
+
+    return true;
+  }
 }
 
 module.exports = Trie;
