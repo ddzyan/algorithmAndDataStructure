@@ -7,7 +7,7 @@
 class TrieNode {
   constructor(char) {
     this.data = char; // 保存节点数据
-    this.children = [26]; // 保存多叉树节点
+    this.children = []; // 保存多叉树节点
     this.isEndingChar = false; // 判断是否为末尾
   }
 }
