@@ -2,6 +2,7 @@ const assert = require('assert');
 
 const Trie = require('../../dataStructure/非线性表/树/Trie');
 const TrieSolution = require('../../dataStructure/非线性表/树/Trie/solution-2');
+const minimumLengthEncoding = require('../../dataStructure/非线性表/树/Trie/q820单词的压缩编码');
 
 describe('Trie 树', function () {
   describe('使用数组源码实现 test', function () {
@@ -50,5 +51,11 @@ describe('Trie 树', function () {
       assert(trie.startsWith('he'), '未查找到指定字符串');
       assert(!trie.startsWith('good'), '查找到不存在的字符串');
     });
+  });
+
+  describe('q820单词的压缩编码 test', function () {
+    const size = minimumLengthEncoding(['time', 'time', 'me', 'bell']);
+
+    assert.strictEqual(size, 10, '长度错误');
   });
 });

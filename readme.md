@@ -52,8 +52,8 @@ $ npm  test
       - [x] q104-二叉树的最大深度
     - Trie 树
       - [x] [源码实现 Trie 树](./dataStructure/非线性表/树/Trie/index.js)
-      - [ ] 208. 实现 Trie (前缀树)
-      - [ ] 820. 单词的压缩编码
+      - [x] 208. 实现 Trie (前缀树)
+      - [x] 820. 单词的压缩编码
   - 图
     - [x] [无向图源码实现](./dataStructure/非线性表/图/graph.js)
 
