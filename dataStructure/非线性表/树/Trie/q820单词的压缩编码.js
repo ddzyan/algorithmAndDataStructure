@@ -7,8 +7,6 @@
 
 那么成功对给定单词列表进行编码的最小字符串长度是多少呢？
 
- 
-
 示例：
 
 输入: words = ["time", "me", "bell"]
@@ -17,7 +15,7 @@
 */
 
 /**
- * @description 不是最优解
+ * @description 不是最优解，都是采用现成的数据结构，无法了解底层实现
  * @param {Array<string>} words
  * @returns {Number}
  */
@@ -40,5 +38,3 @@ const minimumLengthEncoding = function (words) {
 };
 
 module.exports = minimumLengthEncoding;
-
-//console.log(minimumLengthEncoding(['time', 'me', 'bell']));

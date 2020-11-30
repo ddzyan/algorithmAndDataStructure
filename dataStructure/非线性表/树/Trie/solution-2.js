@@ -1,3 +1,6 @@
+/**
+ * 使用对象来保存多叉节点，但是对象不是基础数据结构，此方法无法了解对象底层在内存中是如何保存的
+ */
 class Trie {
   constructor() {
     this.root = Object.create(null);
