@@ -36,6 +36,8 @@ $ npm  test
 - [字符串匹配](./algorithm/字符串匹配)
   - [x] BF(暴力解法)
   - [ ] RK
+- [贪心算法](./algorithm/贪心算法)
+  - [x] q242 有效的字母异位词
 
 ## [数据结构](./dataStructure)
 
