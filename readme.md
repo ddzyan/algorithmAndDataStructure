@@ -1,16 +1,8 @@
 ![单元测试](https://github.com/ddzyan/algorithmAndDataStructure/workflows/Nodejs/badge.svg)
 
-## 简介
+# 简介
 
 记录学习极客时间《数据结构和算法之美》过程中源码实现的数据结构和算法，也会不定时更新每个算法或者数据结构对应的 leetCode 笔试题
-
-## 测试
-
-```sh
-$ npm install
-
-$ npm  test
-```
 
 ## [算法](./algorithm)
 
@@ -60,7 +52,25 @@ $ npm  test
   - 图
     - [x] [无向图源码实现](./dataStructure/非线性表/图/graph.js)
 
-## 笔记
+# 测试
+
+```sh
+$ npm install
+
+$ npm  test
+```
+
+# 笔记
+
+## 算法
+
+### 贪心算法
+
+贪心算法核心思想非常简单：每一步都采取最优的做法。
+
+缺点：每一步都采取最优的做法，但是总的来说并不是最优解，无法进行考虑结合多个步骤给出最优的做法
+
+## 数据结构
 
 ### 散列表，跳表和红黑树的优缺点
 
