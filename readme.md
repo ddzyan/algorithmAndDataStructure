@@ -38,6 +38,7 @@ $ npm  test
   - [ ] RK
 - [贪心算法](./algorithm/贪心算法)
   - [x] q242 有效的字母异位词
+  - [x] q122 买卖股票的最佳时机 II
 
 ## [数据结构](./dataStructure)
 
