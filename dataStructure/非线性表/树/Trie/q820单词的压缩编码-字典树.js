@@ -77,6 +77,4 @@ const minimumLengthEncoding = function (words) {
   return trie.calDepth();
 };
 
-console.log(minimumLengthEncoding(['time', 'atime', 'btime']));
-
 module.exports = minimumLengthEncoding;

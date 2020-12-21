@@ -65,7 +65,3 @@ const search = function (arr, targetValue) {
 };
 
 module.exports = search;
-
-let nums = [7, 8, 1, 2, 3, 4, 5, 6];
-let target = 2;
-console.log(search(nums, target));

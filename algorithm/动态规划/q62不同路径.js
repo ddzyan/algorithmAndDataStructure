@@ -42,7 +42,3 @@ const uniquePaths = function (m, n) {
 
   return dp[m - 1][n - 1];
 };
-
-console.log(uniquePaths(3, 7));
-console.log(uniquePaths(3, 3));
-console.log(uniquePaths(3, 2));

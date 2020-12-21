@@ -36,8 +36,3 @@ const numWays = function (n) {
 module.exports = {
   numWays,
 };
-
-console.log(numWays(7));
-console.log(numWays(2));
-console.log(numWays(44));
-console.log(numWays(78));

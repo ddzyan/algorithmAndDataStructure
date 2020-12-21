@@ -3,6 +3,7 @@ const assert = require('assert');
 const { numWays } = require('../../../algorithm/动态规划/青蛙跳台阶问题');
 const minDistance = require('../../../algorithm/动态规划/q72编辑距离');
 const coinChange = require('../../../algorithm/动态规划/q322零钱兑换');
+const minCostClimbingStairs = require('../../../algorithm/动态规划/q746使用最小花费爬楼梯');
 
 describe('动态规划', function () {
   it('青蛙跳台阶问题 test', function () {
@@ -21,5 +22,15 @@ describe('动态规划', function () {
     assert.strictEqual(coinChange([1, 2, 5], 11), 3, '结果返回错误');
     assert.strictEqual(coinChange([2], 3), -1, '结果返回错误');
     assert.strictEqual(coinChange([1], 0), 0, '结果返回错误');
+  });
+
+  it('q746 使用最小花费爬楼梯 test', function () {
+    assert.strictEqual(minCostClimbingStairs([10, 15, 20]), 15, '结果返回错误');
+    assert.strictEqual(
+      minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]),
+      6,
+      '结果返回错误'
+    );
+    assert.strictEqual(minCostClimbingStairs([0, 0, 0]), 0, '结果返回错误');
   });
 });
