@@ -30,5 +30,5 @@ var longestValidParentheses = function (s) {
   }
   return max;
 };
-
+module.exports = longestValidParentheses;
 console.log(longestValidParentheses('(()'));
