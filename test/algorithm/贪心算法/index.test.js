@@ -36,6 +36,7 @@ describe('贪心算法', function () {
   describe('q455分发饼干', function () {
     it('test', function () {
       assert.strictEqual(findContentChildren([1, 2, 3], [1, 1]), 1, '结果返回错误');
+      assert.strictEqual(findContentChildren([10, 9, 8, 7], [5, 6, 7, 8]), 0, '结果返回错误');
     });
   });
 });

@@ -7,7 +7,7 @@
  */
 /**
  * @description 贪心算法
- * 将饼干和胃口按大小进行排序，然后将大的饼干优先给予胃口大的学生
+ * 将饼干和胃口从小到大进行排序，然后先将小的饼干优先给予胃口小的学生
  * 时间复杂度：排序 O(nlogm,mlogn),遍历复杂度O(m+n)
  * @param {number[]} g 每个孩子的胃口
  * @param {number[]} s 每个饼干的大小
@@ -19,7 +19,7 @@ var findContentChildren = function (g, s) {
   let i = 0;
   let j = 0;
   while (i < g.length && j < s.length) {
-    if (g[i] <= s[i]) {
+    if (g[i] <= s[j]) {
       i++;
     }
     j++;
@@ -30,4 +30,4 @@ var findContentChildren = function (g, s) {
 
 module.exports = findContentChildren;
 
-console.log(findContentChildren([1, 2, 3], [1, 1]));
+console.log(findContentChildren([10, 9, 8, 7], [5, 6, 7, 8]));
