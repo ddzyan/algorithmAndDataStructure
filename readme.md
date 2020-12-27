@@ -53,6 +53,7 @@
   - 顺序表
     - hash 表
       - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap.js)
+      - [x] q205 同构字符串
     - 栈
       - [x] q32 最长有效括号
   - 链表
