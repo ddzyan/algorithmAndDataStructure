@@ -1,6 +1,7 @@
 const assert = require('assert');
 const MyMap = require('../../../../dataStructure/线性表/顺序表/hash表/MyMap');
 const isIsomorphic = require('../../../../dataStructure/线性表/顺序表/hash表/q205同构字符串');
+const twoSum = require('../../../../dataStructure/线性表/顺序表/hash表/q1两数之和');
 
 describe('源码实现 js Map 对象测试', () => {
   const myMap = new MyMap();
@@ -28,5 +29,11 @@ describe('leetCode test', () => {
   it('q205同构字符串 test', () => {
     assert.strictEqual(isIsomorphic('ab', 'aa'), false, '结果错误');
     assert.strictEqual(isIsomorphic('egg', 'add'), true, '结果错误');
+  });
+
+  it('q1两数之和 test', () => {
+    const [a, b] = twoSum([2, 7, 11, 15], 9);
+    assert.strictEqual(a, 0, '结果错误');
+    assert.strictEqual(b, 1, '结果错误');
   });
 });
