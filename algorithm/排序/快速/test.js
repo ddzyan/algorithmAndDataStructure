@@ -5,6 +5,7 @@
 
 /**
  * @description 将数组按照分割点进行站位，并且返回分割点
+ *
  * @returns {Array<number>} arr
  * @returns {number} start
  * @returns {number} end
@@ -12,11 +13,12 @@
 function partition(arr, start, end) {
   const point = arr[end];
   let i = start;
+
   for (let j = start; j < end; j++) {
     if (arr[j] < point) {
-      const temp = arr[j];
-      arr[j] = arr[i];
-      arr[i] = temp;
+      const temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
       i++;
     }
   }
@@ -24,7 +26,6 @@ function partition(arr, start, end) {
   const temp = arr[i];
   arr[i] = arr[end];
   arr[end] = temp;
-
   return i;
 }
 
@@ -37,14 +38,12 @@ function partition(arr, start, end) {
 function sort(arr, start, end) {
   if (start >= end) return arr;
 
-  // 寻找分割点
   const point = partition(arr, start, end);
-
   sort(arr, start, point - 1);
   sort(arr, point, end);
 }
 
 module.exports = function (arr) {
   sort(arr, 0, arr.length - 1);
-  return { arr };
+  return arr;
 };

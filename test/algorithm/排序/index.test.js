@@ -40,7 +40,7 @@ describe('排序测试', function () {
     const arr = [4, 9, 3, 2, 1, 7, 8, 5, 6];
     const mergeSort = require('../../../algorithm/排序/归并/test');
     console.timeEnd('归并');
-    const { arr: newArr } = mergeSort(arr);
+    const newArr = mergeSort(arr);
 
     //assert.ok(count > 0, '运算次数错误');
     assert.strictEqual(newArr.toString(), sortArr.toString(), '排序结果错误');
@@ -51,7 +51,7 @@ describe('排序测试', function () {
     const arr = [4, 9, 3, 2, 1, 7, 8, 5, 6];
     const mergeSort = require('../../../algorithm/排序/快速/test');
     console.timeEnd('快速');
-    const { arr: newArr } = mergeSort(arr);
+    const newArr = mergeSort(arr);
 
     //assert.ok(count > 0, '运算次数错误');
     assert.strictEqual(newArr.toString(), sortArr.toString(), '排序结果错误');

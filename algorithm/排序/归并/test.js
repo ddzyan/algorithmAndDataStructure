@@ -7,27 +7,28 @@
  * @description 合并切分后的数组
  * @param {Array<number>} left
  * @param {Array<number>} right
+ * @returns {Array<number>}
  */
 function merge(left, right) {
-  const temp = [];
+  const result = [];
 
   while (left.length > 0 && right.length > 0) {
     if (left[0] <= right[0]) {
-      temp.push(left.shift());
+      result.push(left.shift());
     } else {
-      temp.push(right.shift());
+      result.push(right.shift());
     }
   }
 
   while (left.length) {
-    temp.push(left.shift());
+    result.push(left.shift());
   }
 
   while (right.length) {
-    temp.push(right.shift());
+    result.push(right.shift());
   }
 
-  return temp;
+  return result;
 }
 
 /**
@@ -41,10 +42,7 @@ function mergeSort(arr) {
   const mind = len >> 1;
   const left = arr.slice(0, mind);
   const right = arr.slice(mind, len);
-
   return merge(mergeSort(left), mergeSort(right));
 }
 
-module.exports = function (arr) {
-  return { arr: mergeSort(arr) };
-};
+module.exports = mergeSort;
