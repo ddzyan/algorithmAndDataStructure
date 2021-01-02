@@ -16,9 +16,9 @@ function sort(arr) {
       }
     }
 
-    const temp = arr[index];
-    arr[index] = arr[i];
-    arr[i] = temp;
+    const temp = arr[i];
+    arr[i] = arr[index];
+    arr[index] = temp;
   }
 
   return { arr, count };
