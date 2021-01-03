@@ -54,30 +54,30 @@
 ## [数据结构](./dataStructure)
 
 - 线性表
-  - 顺序表
-    - hash 表
-      - [x] [源码实现 js Map 对象](./dataStructure/线性表/顺序表/hash表/MyMap.js)
+  - [顺序表](./dataStructure/线性表/顺序表)
+    - [hash 表](./dataStructure/线性表/顺序表/hash表)
+      - [x] 源码实现 js Map 对象
       - [x] q205 同构字符串
       - [x] q1 两数之和
-    - 栈
+    - [栈](./dataStructure/线性表/顺序表/栈)
       - [x] q32 最长有效括号
-    - 链表
-      - [x] 剑指 Offer18 删除链表的节点
-    - 队列
+    - [队列](./dataStructure/线性表/顺序表/队列)
       - [x] q17 电话号码的字母组合
-  - 链表
-    - [x] [抽象数据类型](./dataStructure/线性表/链表/LinkList)
-- 非线性表
-  - 树
-    - 二叉树
-      - [x] [源码实现二叉查找树](./dataStructure/非线性表/树/二叉树/BinarySearchTree.js)
+  - [链表](./dataStructure/线性表/链表)
+    - [x] 抽象数据类型
+    - [x] q86 分隔链表
+    - [x] 剑指 Offer18 删除链表的节点
+- [非线性表](./dataStructure/非线性表)
+  - [树](./dataStructure/非线性表/树)
+    - [二叉树](./dataStructure/非线性表/树/二叉树)
+      - [x] 源码实现二叉查找树
       - [x] q104-二叉树的最大深度
-    - Trie 树
-      - [x] [源码实现 Trie 树](./dataStructure/非线性表/树/Trie/index.js)
+    - [Trie 树](./dataStructure/非线性表/树/Trie)
+      - [x] 源码实现 Trie 树
       - [x] 208. 实现 Trie (前缀树)
       - [x] 820. 单词的压缩编码
-  - 图
-    - [x] [无向图源码实现](./dataStructure/非线性表/图/graph.js)
+  - [图](./dataStructure/非线性表/图)
+    - [x] 无向图源码实现
 
 # 测试
 
