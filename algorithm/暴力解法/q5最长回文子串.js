@@ -8,7 +8,7 @@
 注意: "aba" 也是一个有效答案。
  */
 
-const check = function (checkSrt, left, right) {
+const check = function(checkSrt, left, right) {
   while (left < right) {
     if (checkSrt[left] !== checkSrt[right]) {
       return false;
@@ -27,10 +27,10 @@ const check = function (checkSrt, left, right) {
  * @param {string} s
  * @return {string}
  */
-var longestPalindrome = function (s) {
+var longestPalindrome = function(s) {
   const len = s.length;
 
-  const charArray = s.split('');
+  const charArray = s.split("");
 
   let begin = 0;
   let maxLen = 1;

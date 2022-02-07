@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base", "plugin:promise/recommended"],
+  "plugins": ["promise"],
+  "parserOptions": {
+    "ecmaVersion": 2015,
+    "sourceType": "module", // Allows for the use of imports
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  }
+}
