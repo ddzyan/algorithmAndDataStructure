@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description":
     "记录学习极客时间《数据结构和算法之美》过程中，使用 `javascript` 源码实现的数据结构和算法，也会不定时更新每个算法或者数据结构对应的 leetCode 笔试题",
-  "main": "index.js",
   "scripts": {
     "test": "mocha --exit  --recursive"
   },

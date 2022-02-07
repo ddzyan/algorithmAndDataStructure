@@ -6,6 +6,12 @@
 
 增加使用 javascript 实现常见的 22 中设计模式
 
+其他核心仓库请参考：
+
+* [javascript 常见模块使用案例](https://github.com/ddzyan/node-module-example)
+* [javascript 数据结构，算法和设计模式实现](https://github.com/ddzyan/algorithmAndDataStructure)
+* [javascript 实践代码，框架源码，原生模块源码实现等](https://github.com/ddzyan/node-project)
+
 ## [设计模式](./designPatterns)
 
 * 构建型
